@@ -4,34 +4,20 @@ weight: 1
 ---
 
 ## Introduction
-@zeus Thunder, is a Ticketing System. with Offices, chat, and Frontend Ready.
+@zeus Delia, is a bookmark manager for your filament resources.
 
-Thunder is an Extensions for [Bolt](https://site.test/bolt), Build your own forms and use them as ticketing systems for your offices.
-
-**[Demo](https://demo.larazeus.com) · [Github](https://github.com/lara-zeus/thunder)**
+**[Demo](https://demo.larazeus.com/admin/bookmarks) · [Github](https://github.com/lara-zeus/delia) · [Discord](#)**
 
 ## Features
 
-- 🔥 built with [TALL stack](https://tallstack.dev/)
-- 🔥 using [filament](https://filamentadmin.com) as an admin panel
-- 🔥 FrontEnd scaffolding, highly customizable.
-- 🔥 Offices
-- 🔥 Internal Offices
-- 🔥 Set Status
-- 🔥 Set Priority
-- 🔥 Escalations
-- 🔥 auto Assigment, available mechanism:
-  - 🔥 Manually
-  - 🔥 Manager only
-  - 🔥 Employees only
-  - 🔥 Employees manager first
-- 🔥 Support Channels:
-  - 🔥 use multiple forms
-  - 🔥 faq, from Sky Plugin
+- 🔥 Add any resources to bookmark.
+- 🔥 easy access to the bookmark list from the top bar
+- 🔥 included widget
 
 ## Support
 
 available support channels:
 
-* using our channel `#thunder` on [Discord](https://discord.com/channels/883083792112300104/1184785837335007322)
-* email us using the [contact center](https://larazeus.com/contact-us)
+* using our channel `#delia` on [Filament Discord](#)
+* open an issue on [GitHub](https://github.com/lara-zeus/delia/issues)
+* Email us using the [contact center](https://larazeus.com/contact-us)

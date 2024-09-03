@@ -1,7 +1,7 @@
 ---
-title: v3
-slogan: Ticketing System. with Offices, chat, and Frontend Ready.
-githubUrl: https://github.com/lara-zeus/thunder
-branch: main
+title: v1
+slogan: Bookmark manager for your filament resources
+githubUrl: https://github.com/lara-zeus/delia
+branch: 1.x
 icon: vaadin-bolt
 ---

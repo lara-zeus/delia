@@ -5,71 +5,39 @@ weight: 3
 
 ## Configuration
 
-to configure the plugin Thunder, you can pass the configuration to the plugin in `adminPanelProvider`
+to configure the plugin Delia, you can pass the configuration to the plugin in `adminPanelProvider`
 
 these all the available configuration, and their defaults values
 
 ```php
-ThunderPlugin::make()
-    ->thunderModels([
-        'Office' => \LaraZeus\Delia\Models\Office::class,
-        'Operations' => \LaraZeus\Delia\Models\Operations::class,
-        'Ticket' => \LaraZeus\Delia\Models\Ticket::class,
-        'TicketsStatus' => \LaraZeus\Delia\Models\TicketsStatus::class,
-        'Abilities' => \LaraZeus\Delia\Enums\Abilities::class,
+DeliaPlugin::make()
+    ->deliaModels([
+        'User' => config('auth.providers.users.model'),
+        'Bookmark' => \LaraZeus\Delia\Models\Bookmark::class,
     ])
-    ->uploadDisk('public')
-    ->uploadDirectory('tickets')
-    ->navigationGroupLabel('Thunder')
+    ->navigationGroupLabel('Delia')
     ->hideResources([
-        OfficeResource::class,
-        TicketResource::class,
-    ])
-    
-    ->globallySearchableAttributes([
-        // you can return empty array to disable it
-        OfficeResource::class => ['name', 'slug'],
-        TicketResource::class => ['ticket_no'],
+        BookmarkResource::class,
     ])
 ```
 
-## Frontend Configuration
+## Configuration File
 
-use the file `zeu-thunder.php`, to customize the frontend, like the prefix,domain, and middleware for each content type.
+use the file `zeu-delia.php`, to customize the global configuration.
 
 to publish the configuration:
 
 ```bash
-php artisan vendor:publish --tag=zeus-thunder-config
+php artisan vendor:publish --tag=zeus-delia-config
 ```
 
-## Ticket No Generator
+## Render Hooks:
 
-by default, thunder will generate the ticket number using a random string, 
-
-```php
-namespace LaraZeus\Delia\Support;
-
-use Illuminate\Support\Str;
-
-class TicketNo
-{
-    public static function get(): string
-    {
-        return Str::random(6);
-    }
-}
-```
-
-if you want to change that, create any class with the method `get`, and set it in the config file:
-
-`'ticket-no' => \LaraZeus\Delia\Support\TicketNo::class,`
-
-for example:
+you can customize the render hooks in the config file:
 
 ```php
-public static function get(): string
-{
-    return DB::table('tickets')->max('ticket_no') + 1;
-}
+'render-hooks' => [
+    'list' => PanelsRenderHook::TOPBAR_END,
+    'bookmark_toggle_icon' => TablesRenderHook::TOOLBAR_TOGGLE_COLUMN_TRIGGER_AFTER,
+],
 ```

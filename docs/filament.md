@@ -1,69 +1,26 @@
-## Zeus Thunder
+## Zeus Delia
 
-Ticketing System. with Offices, chat, and Frontend Ready.
-Build your own forms and use them as ticketing for your offices.
+a bookmark manager for your filament resources.
+When you have many, many resources, let your users bookmark what's important to them for easy access.
 
 ## Features
 
-- 🔥 FrontEnd scaffolding, highly customizable.
-- 🔥 Offices
-- 🔥 Internal Offices
-- 🔥 Set Status
-- 🔥 Set Priority
-- 🔥 Escalations
-- 🔥 auto Assigment, available mechanism:
-    - 🔥 Manually
-    - 🔥 Managers only
-    - 🔥 Employees only
-    - 🔥 Employees and Managers
-- 🔥 Support Channels:
-    - 🔥 use multiple forms
-    - 🔥 FAQ, from sky
-- 🔥 Operations
-- 🔥 Users Permissions
+- 🔥 Add any resources to bookmark.
+- 🔥 easy access to the bookmark list from the top bar
+- 🔥 included widget
 
 ## Screenshots
 
-* **Frontend:**:
+* **Admin:**:
 
-Frontend ready for users to list and interact with their tickets
-
-![](https://larazeus.com/images/screenshots/thunder/frontend-1.webp)
-![](https://larazeus.com/images/screenshots/thunder/frontend-2.webp)
-![](https://larazeus.com/images/screenshots/thunder/frontend-3.webp)
-
-* **Manage Offices:**:
-
-Manage offices and users permissions
-
-![](https://larazeus.com/images/screenshots/thunder/office-1.webp)
-![](https://larazeus.com/images/screenshots/thunder/office-2.webp)
-![](https://larazeus.com/images/screenshots/thunder/office-3.webp)
-![](https://larazeus.com/images/screenshots/thunder/office-4.webp)
-![](https://larazeus.com/images/screenshots/thunder/office-5.webp)
-![](https://larazeus.com/images/screenshots/thunder/office-6.webp)
-
-* **List Tickets:**:
-
-list all tickets with advanced filtering
-
-![](https://larazeus.com/images/screenshots/thunder/list-tickets-1.webp)
-![](https://larazeus.com/images/screenshots/thunder/list-tickets-2.webp)
-![](https://larazeus.com/images/screenshots/thunder/list-tickets-3.webp)
-![](https://larazeus.com/images/screenshots/thunder/list-tickets-4.webp)
-
-* **View Ticket:**:
-
-list all tickets with advanced filtering
-
-![](https://larazeus.com/images/screenshots/thunder/show-ticket-1.webp)
-![](https://larazeus.com/images/screenshots/thunder/show-ticket-12.webp)
-![](https://larazeus.com/images/screenshots/thunder/show-ticket-11.webp)
+![](https://larazeus.com/images/screenshots/delia/admin-1.webp)
+![](https://larazeus.com/images/screenshots/delia/admin-2.webp)
+![](https://larazeus.com/images/screenshots/delia/admin-3.webp)
 
 ## More Details
 
-**✨ to learn more about Thunder the Ticketing System, please visit:**
+**✨ to learn more about Delia the bookmark manager, please visit:**
 
-- [Docs](https://larazeus.com/docs/thunder)
-- [Demo](https://demo.larazeus.com/admin)
-- [Discord](https://discord.com/channels/883083792112300104/1184785837335007322)
+- [Docs](https://larazeus.com/delia)
+- [Demo](https://demo.larazeus.com/admin/bookmarks)
+- [Discord](#)

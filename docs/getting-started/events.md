@@ -5,15 +5,16 @@ weight: 6
 
 ## Available Events
 
-Thunder will fire these events:
-- `LaraZeus\Delia\Events\TicketCreated`
+Delia will fire these events:
+- `LaraZeus\Delia\Events\BookmarkAdded`
+- `LaraZeus\Delia\Events\BookmarkRemoved`
 
 ## Register a Listener:
 
 * First, create your listener:
 * 
 ```bash
-php artisan make:listener SendThunderNotification --event=TicketCreated
+php artisan make:listener SendNotification --event=BookmarkAdded
 ```
 
 * Second, register the listener in your `EventServiceProvider`
@@ -21,17 +22,11 @@ php artisan make:listener SendThunderNotification --event=TicketCreated
 ```php
 protected $listen = [
     //...
-    TicketCreated::class => [
-        SendThunderNotification::class,
+    BookmarkAdded::class => [
+        SendNotification::class,
     ],
 ];
 ```
 
 * Finally, you can receive the form object in the `handle` method and do whatever you want.
-  For example:
 
-```php
-Mail::to(User::first())->send(new Contact(
-    $event->ticket->subject, $event->user->email, $event->ticket->subject
-));
-```
