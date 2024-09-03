@@ -1,13 +1,5 @@
 <?php
 
-/*todo
- * render hook to show the dropdown list
- * render hook to show the bookmark toggle
- * a blade component
- * an action
- * multi tenant
- */
-
 use Filament\Tables\View\TablesRenderHook;
 use Filament\View\PanelsRenderHook;
 
