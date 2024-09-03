@@ -2,20 +2,15 @@
 
 namespace LaraZeus\Delia\Models;
 
-use Database\Factories\OfficeFactory;
-use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use LaraZeus\Bolt\BoltPlugin;
-use Spatie\Translatable\HasTranslations;
 
 /**
  * @property string $id
+ * @property string $bookmarkable_resource.
  */
 class Bookmark extends Model
 {
-    protected array $guarded = [];
+    protected $guarded = [];
 
     protected $casts = [
         //

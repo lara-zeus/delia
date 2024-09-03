@@ -1,22 +1,11 @@
 <?php
 
-namespace LaraZeus\Delia\Filament\Resources\OfficeResource\Pages;
+namespace LaraZeus\Delia\Filament\Resources\BookmarkResource\Pages;
 
-use Filament\Actions;
-use Filament\Actions\Action;
 use Filament\Resources\Pages\ListRecords;
-use LaraZeus\Delia\Filament\Resources\OfficeResource;
+use LaraZeus\Delia\Filament\Resources\BookmarkResource;
 
-class ListOffices extends ListRecords
+class ListBookmarks extends ListRecords
 {
-    use ListRecords\Concerns\Translatable;
-
-    protected static string $resource = OfficeResource::class;
-
-    protected function getActions(): array
-    {
-        return [
-            Actions\CreateAction::make(),
-        ];
-    }
+    protected static string $resource = BookmarkResource::class;
 }
