@@ -12,6 +12,11 @@ return [
         'bookmark_toggle_icon' => TablesRenderHook::TOOLBAR_TOGGLE_COLUMN_TRIGGER_AFTER,
     ],
 
+    'dropdown' => [
+        'title' => 'Bookmarks',
+        'icon' => 'heroicon-m-bookmark-square',
+    ],
+
     /**
      * set  the database tables prefix
      */

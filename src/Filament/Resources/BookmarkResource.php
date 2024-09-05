@@ -6,6 +6,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use LaraZeus\Delia\Delia;
 use LaraZeus\Delia\DeliaPlugin;
 use LaraZeus\Delia\Filament\Resources\BookmarkResource\Pages\ListBookmarks;
@@ -38,21 +39,33 @@ class BookmarkResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->modifyQueryUsing(function (Builder $query) {
+                /** @var Bookmark $query */
+                return $query->user();
+            })
             ->actions([
                 Action::make('bookmark')
                     ->iconButton()
                     ->tooltip(__('zeus-delia::bookmark.remove'))
                     ->color('gray')
                     ->icon('heroicon-s-bookmark')
-                    ->action(fn (Bookmark $record) => Delia::toggle($record->bookmarkable_resource)),
+                    ->action(fn (Bookmark $record) => Delia::remove($record->url)),
             ])
             ->columns([
-                TextColumn::make('bookmarkable_resource')
+                TextColumn::make('title')
                     ->searchable()
                     ->toggleable()
                     ->sortable()
-                    ->formatStateUsing(fn (Bookmark $record) => app($record->bookmarkable_resource)->getNavigationLabel())
-                    ->label(__('zeus-delia::bookmark.bookmarkable_type')),
+                    ->icon(fn (Bookmark $record) => $record->icon)
+                    ->url(fn (Bookmark $record) => $record->url)
+                    ->label(__('zeus-delia::bookmark.title')),
+
+                TextColumn::make('created_at')
+                    ->searchable()
+                    ->toggleable()
+                    ->sortable()
+                    ->dateTime()
+                    ->label(__('zeus-delia::bookmark.created_at')),
             ]);
     }
 
