@@ -1,6 +1,8 @@
 <div>
     {{ ($this->bookmarkAction)([
-        'resource' => $resource
+        'url' => $url,
+        'title' => $title,
+        'icon' => $icon,
     ]) }}
 
     <x-filament-actions::modals />

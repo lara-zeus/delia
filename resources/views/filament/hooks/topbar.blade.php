@@ -7,27 +7,28 @@
     <x-filament::dropdown>
         <x-slot name="trigger">
             <x-filament::icon-button size="lg"
-                icon="heroicon-m-bookmark-square"
+                :icon="config('zeus-delia.dropdown.icon')"
             >
-                More actions
+                {{ config('zeus-delia.dropdown.title') }}
             </x-filament::icon-button>
         </x-slot>
 
-        <x-filament::dropdown.list>
-            @foreach($bookmarks as $bookmark)
-                @if(class_exists($bookmark->bookmarkable_resource))
-                    @php
-                        $resourceClass = app($bookmark->bookmarkable_resource);
-                    @endphp
+        @if($bookmarks->isEmpty())
+            <x-filament::dropdown.header icon="tabler-bookmark-off">
+                No Bookmarks found
+            </x-filament::dropdown.header>
+        @else
+            <x-filament::dropdown.list>
+                @foreach($bookmarks as $bookmark)
                     <x-filament::dropdown.list.item
-                        tag="a"
-                        :icon="$resourceClass->getNavigationIcon()"
-                        :href="$resourceClass->getUrl()"
+                            tag="a"
+                            :icon="$bookmark->icon"
+                            :href="$bookmark->url"
                     >
-                        {{ $resourceClass->getNavigationLabel() }}
+                        {{ $bookmark->title }}
                     </x-filament::dropdown.list.item>
-                    @endif
-            @endforeach
-        </x-filament::dropdown.list>
+                @endforeach
+            </x-filament::dropdown.list>
+        @endif
     </x-filament::dropdown>
 </div>
