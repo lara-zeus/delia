@@ -19,14 +19,13 @@
     "type": "library",
     "authors": [
         {
-            "name": "php coder",
-            "email": "info@larazeus.com",
-            "role": "Owner"
+            "name": "Lara Zeus (Ash)",
+            "email": "info@larazeus.com"
         }
     ],
     "require": {
         "php": "^8.1",
-        "lara-zeus/core": "^3.0"
+        "lara-zeus/filament-plugin-tools": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.1",
