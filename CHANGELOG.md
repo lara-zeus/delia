@@ -2,6 +2,14 @@
 
 All notable changes to `Delia` will be documented in this file
 
+## v1.0.4 - 2024-09-07
+
+### What's Changed
+
+* using filament-plugin-tools and clean up by @atmonshi in https://github.com/lara-zeus/delia/pull/4
+
+**Full Changelog**: https://github.com/lara-zeus/delia/compare/v1.0.3...v1.0.4
+
 ## v1.0.3 - 2024-09-05
 
 ### What's Changed
