@@ -16,11 +16,6 @@ class BookmarkResource extends Resource
 {
     protected static ?string $navigationIcon = 'heroicon-o-bookmark-square';
 
-    public static function getModel(): string
-    {
-        return DeliaPlugin::getModel('Bookmark');
-    }
-
     public static function getModelLabel(): string
     {
         return __('zeus-delia::bookmark.model_label');
@@ -78,11 +73,16 @@ class BookmarkResource extends Resource
 
     public static function shouldRegisterNavigation(): bool
     {
-        return ! in_array(static::class, DeliaPlugin::get()->getHiddenResources());
+        return DeliaPlugin::isResourceVisible(static::class);
     }
 
     public static function getNavigationGroup(): ?string
     {
         return DeliaPlugin::get()->getNavigationGroupLabel();
+    }
+
+    public static function getModel(): string
+    {
+        return DeliaPlugin::getModel('Bookmark');
     }
 }

@@ -7,15 +7,26 @@ use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
 use Illuminate\Contracts\View\View;
 use LaraZeus\Delia\Filament\Resources\BookmarkResource;
+use LaraZeus\FilamentPluginTools\Concerns\CanHideResources;
+use LaraZeus\FilamentPluginTools\Concerns\HasModels;
+use LaraZeus\FilamentPluginTools\Concerns\HasNavigationGroupLabel;
+use LaraZeus\FilamentPluginTools\FilamentPluginTools;
 
-final class DeliaPlugin implements Plugin
+final class DeliaPlugin extends FilamentPluginTools implements Plugin
 {
-    use Configuration;
+    use CanHideResources;
     use EvaluatesClosures;
+    use HasModels;
+    use HasNavigationGroupLabel;
 
-    public function getId(): string
+    protected string $pluginId = 'zeus-delia';
+
+    protected string $navigationGroupLabel = 'Delia';
+
+    // todo get rid of this!
+    public static function make(): static
     {
-        return 'zeus-delia';
+        return new self;
     }
 
     public function register(Panel $panel): void
@@ -32,21 +43,5 @@ final class DeliaPlugin implements Plugin
             ->resources([
                 BookmarkResource::class,
             ]);
-    }
-
-    public static function make(): static
-    {
-        return new self;
-    }
-
-    public static function get(): static
-    {
-        // @phpstan-ignore-next-line
-        return filament('zeus-delia');
-    }
-
-    public function boot(Panel $panel): void
-    {
-        //
     }
 }
