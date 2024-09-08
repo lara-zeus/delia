@@ -23,4 +23,4 @@ When you have many, many resources, let your users bookmark what's important to 
 
 - [Docs](https://larazeus.com/delia)
 - [Demo](https://demo.larazeus.com/admin/bookmarks)
-- [Discord](#)
+- [Discord](https://discord.com/channels/883083792112300104/1282126652284866641)

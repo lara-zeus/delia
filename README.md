@@ -44,7 +44,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## Support
 available support channels:
-* using our channel `#delia` on [Discord](#)
+* using our channel `#delia` on [Discord](https://discord.com/channels/883083792112300104/1282126652284866641)
 * email us using the [contact center](https://larazeus.com/contact-us)
 
 ## Contributing

@@ -6,7 +6,7 @@ weight: 1
 ## Introduction
 @zeus Delia, is a bookmark manager for your filament resources.
 
-**[Demo](https://demo.larazeus.com/admin/bookmarks) · [Github](https://github.com/lara-zeus/delia) · [Discord](#)**
+**[Demo](https://demo.larazeus.com/admin/bookmarks) · [Github](https://github.com/lara-zeus/delia) · [Discord](https://discord.com/channels/883083792112300104/1282126652284866641)**
 
 ## Features
 
@@ -18,6 +18,6 @@ weight: 1
 
 available support channels:
 
-* using our channel `#delia` on [Filament Discord](#)
+* using our channel `#delia` on [Filament Discord](https://discord.com/channels/883083792112300104/1282126652284866641)
 * open an issue on [GitHub](https://github.com/lara-zeus/delia/issues)
 * Email us using the [contact center](https://larazeus.com/contact-us)
