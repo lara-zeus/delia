@@ -2,6 +2,14 @@
 
 All notable changes to `Delia` will be documented in this file
 
+## v1.0.5 - 2024-09-08
+
+### What's Changed
+
+* Update table-column-bookmark.blade.php by @atmonshi in https://github.com/lara-zeus/delia/pull/5
+
+**Full Changelog**: https://github.com/lara-zeus/delia/compare/v1.0.4...v1.0.5
+
 ## v1.0.4 - 2024-09-07
 
 ### What's Changed
