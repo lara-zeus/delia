@@ -11,9 +11,21 @@
         @endif
     @endif
 
+    @if($class instanceof \Filament\Resources\RelationManagers\RelationManager)
+        @php
+            $title = $class->getTable()->getHeading();
+            $icon = '';
+        @endphp
+    @else
+        @php
+            $title = $class::getNavigationLabel();
+            $icon = $class::getNavigationIcon();
+        @endphp
+    @endif
+
     <livewire:delia-bookmarks
         :url="request()->fullUrl()"
-        :title="$class::getNavigationLabel()"
-        :icon="$class::getNavigationIcon()"
+        :title="$title"
+        :icon="$icon"
     />
 </div>
