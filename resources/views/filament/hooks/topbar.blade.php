@@ -14,7 +14,7 @@
         </x-slot>
 
         @if($bookmarks->isEmpty())
-            <x-filament::dropdown.header icon="tabler-bookmark-off">
+            <x-filament::dropdown.header :icon="config('zeus-delia.dropdown.empty_icon')">
                 No Bookmarks found
             </x-filament::dropdown.header>
         @else
