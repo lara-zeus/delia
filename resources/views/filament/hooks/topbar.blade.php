@@ -7,14 +7,14 @@
     <x-filament::dropdown>
         <x-slot name="trigger">
             <x-filament::icon-button size="lg"
-                :icon="config('zeus-delia.dropdown.icon')"
+                :icon="config('zeus-delia.dropdown.icon', 'heroicon-m-bookmark-square')"
             >
                 {{ config('zeus-delia.dropdown.title') }}
             </x-filament::icon-button>
         </x-slot>
 
         @if($bookmarks->isEmpty())
-            <x-filament::dropdown.header :icon="config('zeus-delia.dropdown.empty_icon')">
+            <x-filament::dropdown.header :icon="config('zeus-delia.dropdown.empty_icon', 'heroicon-m-bookmark-slash')">
                 No Bookmarks found
             </x-filament::dropdown.header>
         @else
