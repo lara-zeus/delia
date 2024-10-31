@@ -2,6 +2,14 @@
 
 All notable changes to `Delia` will be documented in this file
 
+## v1.0.7 - 2024-10-31
+
+### What's Changed
+
+* fix default icon by @atmonshi in https://github.com/lara-zeus/delia/pull/8
+
+**Full Changelog**: https://github.com/lara-zeus/delia/compare/v1.0.6...v1.0.7
+
 ## v1.0.6 - 2024-10-31
 
 ### What's Changed
