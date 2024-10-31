@@ -15,7 +15,7 @@ return [
     'dropdown' => [
         'title' => 'Bookmarks',
         'icon' => 'heroicon-m-bookmark-square',
-        'empty_icon' => 'heroicon-m-bookmark-slash'
+        'empty_icon' => 'heroicon-m-bookmark-slash',
     ],
 
     /**
