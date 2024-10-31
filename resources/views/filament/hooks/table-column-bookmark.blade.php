@@ -15,7 +15,6 @@
         @if($class instanceof \Filament\Resources\RelationManagers\RelationManager)
             @php
                 $title = $class->getTable()->getHeading();
-                $icon = '';
             @endphp
         @else
             @php
@@ -27,7 +26,7 @@
         <livewire:delia-bookmarks
             :url="request()->fullUrl()"
             :title="$title"
-            :icon="$icon"
+            :icon="$icon ?? 'heroicon-m-bookmark-slash'"
         />
     @endif
 </div>
