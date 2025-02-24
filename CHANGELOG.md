@@ -2,6 +2,14 @@
 
 All notable changes to `Delia` will be documented in this file
 
+## v1.0.8 - 2025-02-24
+
+### What's Changed
+
+* fix url with record by @atmonshi in https://github.com/lara-zeus/delia/pull/10
+
+**Full Changelog**: https://github.com/lara-zeus/delia/compare/v1.0.7...v1.0.8
+
 ## v1.0.7 - 2024-10-31
 
 ### What's Changed
