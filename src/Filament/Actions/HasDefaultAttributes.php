@@ -2,6 +2,7 @@
 
 namespace LaraZeus\Delia\Filament\Actions;
 
+use Filament\Actions\Action;
 use LaraZeus\Delia\Delia;
 use Livewire\Component;
 
@@ -21,25 +22,41 @@ trait HasDefaultAttributes
             ->color('gray')
             ->tooltip(
                 /** @phpstan-ignore-next-line */
-                fn (Component $livewire) => Delia::exist($livewire->url ?? $livewire->getUrl())
-                    ? __('zeus-delia::bookmark.remove')
-                    : __('zeus-delia::bookmark.add')
+                function (Action $action, Component $livewire) {
+                    return Delia::exist($this->getDeliaUrlData($livewire, $action->getRecord()))
+                        ? __('zeus-delia::bookmark.remove')
+                        : __('zeus-delia::bookmark.add');
+                }
             )
             ->icon(
                 /** @phpstan-ignore-next-line */
-                fn (Component $livewire) => Delia::exist($livewire->url ?? $livewire->getUrl())
-                    ? 'heroicon-s-bookmark'
-                    : 'heroicon-o-bookmark'
+                function (Action $action, Component $livewire) {
+                    return Delia::exist($this->getDeliaUrlData($livewire, $action->getRecord()))
+                        ? 'heroicon-s-bookmark'
+                        : 'heroicon-o-bookmark';
+                }
             )
             ->action(
-                fn (Component $livewire) => Delia::toggle(
-                    /** @phpstan-ignore-next-line */
-                    $livewire->url ?? $livewire->getUrl(),
-                    /** @phpstan-ignore-next-line */
-                    $livewire->title ?? $livewire->getHeading(),
-                    /** @phpstan-ignore-next-line */
-                    $livewire->icon ?? $livewire->getNavigationIcon()
-                )
+                function (Action $action, Component $livewire) {
+                    Delia::toggle(
+                        /** @phpstan-ignore-next-line */
+                        $this->getDeliaUrlData($livewire, $action->getRecord()),
+                        /** @phpstan-ignore-next-line */
+                        $livewire->title ?? $livewire->getHeading(),
+                        /** @phpstan-ignore-next-line */
+                        $livewire->icon ?? $livewire->getNavigationIcon()
+                    );
+                }
             );
+    }
+
+    private function getDeliaUrlData(Component $livewire, mixed $record = null): string
+    {
+        /** @phpstan-ignore-next-line */
+        return $livewire->url ?? $livewire->getUrl(
+            ($record !== null) ? [
+                'record' => $record,
+            ] : []
+        );
     }
 }
