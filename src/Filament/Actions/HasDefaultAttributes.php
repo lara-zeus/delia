@@ -54,6 +54,7 @@ trait HasDefaultAttributes
     {
         // todo
         return '';
+
         /** @phpstan-ignore-next-line */
         return $livewire->url ?? $livewire->getUrl(
             ($record !== null) ? [
