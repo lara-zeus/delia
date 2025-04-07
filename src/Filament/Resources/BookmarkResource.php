@@ -2,8 +2,8 @@
 
 namespace LaraZeus\Delia\Filament\Resources;
 
+use Filament\Actions\Action;
 use Filament\Resources\Resource;
-use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -14,7 +14,7 @@ use LaraZeus\Delia\Models\Bookmark;
 
 class BookmarkResource extends Resource
 {
-    protected static ?string $navigationIcon = 'heroicon-o-bookmark-square';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-bookmark-square';
 
     public static function getModelLabel(): string
     {

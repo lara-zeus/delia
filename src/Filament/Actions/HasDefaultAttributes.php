@@ -52,6 +52,8 @@ trait HasDefaultAttributes
 
     private function getDeliaUrlData(Component $livewire, mixed $record = null): string
     {
+        // todo
+        return '';
         /** @phpstan-ignore-next-line */
         return $livewire->url ?? $livewire->getUrl(
             ($record !== null) ? [
