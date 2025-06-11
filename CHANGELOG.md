@@ -2,6 +2,10 @@
 
 All notable changes to `Delia` will be documented in this file
 
+## 2.0.0 - 2025-06-11
+
+support filament 4 beta
+
 ## v1.0.8 - 2025-02-24
 
 ### What's Changed
