@@ -18,8 +18,8 @@
             @endphp
         @else
             @php
-                $title = $class::getNavigationLabel();
-                $icon = $class::getNavigationIcon();
+                $title = ""; //$class::getNavigationLabel();
+                $icon = ""; //$class::getNavigationIcon();
             @endphp
         @endif
 
