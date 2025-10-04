@@ -2,6 +2,14 @@
 
 All notable changes to `Delia` will be documented in this file
 
+## 2.0.3 - 2025-10-04
+
+### What's Changed
+
+* update for Filament 4 by @atmonshi in https://github.com/lara-zeus/delia/pull/13
+
+**Full Changelog**: https://github.com/lara-zeus/delia/compare/2.0.0...2.0.3
+
 ## 2.0.0 - 2025-06-11
 
 support filament 4 beta
