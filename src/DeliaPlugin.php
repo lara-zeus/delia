@@ -34,10 +34,12 @@ final class DeliaPlugin extends FilamentPluginTools implements Plugin
         $panel
             ->renderHook(
                 config('zeus-delia.render-hooks.bookmark_toggle_icon'),
+                /** @phpstan-ignore-next-line */
                 fn (): View => view('zeus-delia::filament.hooks.table-column-bookmark'),
             )
             ->renderHook(
                 config('zeus-delia.render-hooks.list'),
+                /** @phpstan-ignore-next-line */
                 fn (): View => view('zeus-delia::filament.hooks.topbar'),
             )
             ->resources([

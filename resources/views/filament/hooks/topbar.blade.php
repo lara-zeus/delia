@@ -22,7 +22,7 @@
                 @foreach($bookmarks as $bookmark)
                     <x-filament::dropdown.list.item
                             tag="a"
-                            :icon="$bookmark->icon"
+                            :icon="($bookmark->icon instanceof \BackedEnum) ? $bookmark->icon->getIconForSize(\Filament\Support\Enums\IconSize::Medium) : $bookmark->icon"
                             :href="$bookmark->url"
                     >
                         {{ $bookmark->title }}
