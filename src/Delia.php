@@ -2,7 +2,9 @@
 
 namespace LaraZeus\Delia;
 
+use BackedEnum;
 use Filament\Notifications\Notification;
+use Filament\Support\Enums\IconSize;
 
 class Delia
 {
@@ -14,7 +16,7 @@ class Delia
             ->exists();
     }
 
-    public static function toggle(string $url, string $title, string $icon): void
+    public static function toggle(string $url, string $title, string | BackedEnum | null $icon): void
     {
         if (static::exist($url)) {
             static::remove($url);
@@ -23,12 +25,13 @@ class Delia
         }
     }
 
-    public static function add(string $url, string $title, string $icon): void
+    public static function add(string $url, string $title, string | BackedEnum | null $icon): void
     {
         config('zeus-delia.models.Bookmark')::create([
             'url' => $url,
             'title' => $title,
-            'icon' => $icon,
+            /** @phpstan-ignore-next-line */
+            'icon' => ($icon instanceof BackedEnum) ? $icon->getIconForSize(IconSize::Small) : $icon,
             'user_id' => auth()->user()->id,
         ]);
 
