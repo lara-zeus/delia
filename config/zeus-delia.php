@@ -2,7 +2,6 @@
 
 use Filament\Tables\View\TablesRenderHook;
 use Filament\View\PanelsRenderHook;
-use LaraZeus\Delia\Models\Bookmark;
 
 return [
     /**
@@ -31,6 +30,6 @@ return [
      */
     'models' => [
         'User' => config('auth.providers.users.model'),
-        'Bookmark' => Bookmark::class,
+        'Bookmark' => \LaraZeus\Delia\Models\Bookmark::class,
     ],
 ];

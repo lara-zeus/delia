@@ -36,7 +36,6 @@ class BookmarkComponent extends Component implements HasActions, HasForms
 
     public function render(): View | Application | Factory | ApplicationAlias
     {
-        /** @phpstan-ignore-next-line */
         return view('zeus-delia::components.bookmark');
     }
 }
