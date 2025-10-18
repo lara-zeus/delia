@@ -5,6 +5,7 @@ namespace LaraZeus\Delia\Filament\Resources;
 use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Resources\Resource;
+use Filament\Support\Enums\IconSize;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -37,9 +38,10 @@ class BookmarkResource extends Resource
         return $table
             ->modifyQueryUsing(function (Builder $query) {
                 /** @var Bookmark $query */
+                /** @phpstan-ignore-next-line */
                 return $query->user();
             })
-            ->actions([
+            ->recordActions([
                 Action::make('bookmark')
                     ->iconButton()
                     ->tooltip(__('zeus-delia::bookmark.remove'))
@@ -52,7 +54,8 @@ class BookmarkResource extends Resource
                     ->searchable()
                     ->toggleable()
                     ->sortable()
-                    ->icon(fn (Bookmark $record) => $record->icon)
+                    /** @phpstan-ignore-next-line */
+                    ->icon(fn (Bookmark $record) => ($record->icon instanceof BackedEnum) ? $record->icon->getIconForSize(IconSize::Small) : $record->icon)
                     ->url(fn (Bookmark $record) => $record->url)
                     ->label(__('zeus-delia::bookmark.title')),
 
