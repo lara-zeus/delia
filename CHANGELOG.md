@@ -2,6 +2,14 @@
 
 All notable changes to `Delia` will be documented in this file
 
+## 2.0.4 - 2025-10-18
+
+### What's Changed
+
+* fix icons v2 by @atmonshi in https://github.com/lara-zeus/delia/pull/17
+
+**Full Changelog**: https://github.com/lara-zeus/delia/compare/2.0.2...2.0.4
+
 ## 2.0.3 - 2025-10-04
 
 ### What's Changed
