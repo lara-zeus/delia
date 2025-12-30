@@ -4,7 +4,7 @@
             ->where('user_id',auth()->user()->id)
             ->get();
     @endphp
-    <x-filament::dropdown>
+    <x-filament::dropdown :teleport="true">
         <x-slot name="trigger">
             <x-filament::icon-button size="lg"
                 :icon="config('zeus-delia.dropdown.icon', 'heroicon-m-bookmark-square')"
