@@ -2,6 +2,18 @@
 
 All notable changes to `Delia` will be documented in this file
 
+## 2.0.5 - 2026-01-02
+
+### What's Changed
+
+* fix dropdown popup list by @theofanisv in https://github.com/lara-zeus/delia/pull/18
+
+### New Contributors
+
+* @theofanisv made their first contribution in https://github.com/lara-zeus/delia/pull/18
+
+**Full Changelog**: https://github.com/lara-zeus/delia/compare/2.0.4...2.0.5
+
 ## 2.0.4 - 2025-10-18
 
 ### What's Changed
