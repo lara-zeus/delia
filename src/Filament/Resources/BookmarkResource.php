@@ -80,7 +80,7 @@ class BookmarkResource extends Resource
         return DeliaPlugin::isResourceVisible(static::class);
     }
 
-    public static function getNavigationGroup(): ?string
+    public static function getNavigationGroup(): string | \UnitEnum | null
     {
         return DeliaPlugin::get()->getNavigationGroupLabel();
     }
