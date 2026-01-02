@@ -13,6 +13,7 @@ use LaraZeus\Delia\Delia;
 use LaraZeus\Delia\DeliaPlugin;
 use LaraZeus\Delia\Filament\Resources\BookmarkResource\Pages\ListBookmarks;
 use LaraZeus\Delia\Models\Bookmark;
+use UnitEnum;
 
 class BookmarkResource extends Resource
 {
@@ -80,7 +81,7 @@ class BookmarkResource extends Resource
         return DeliaPlugin::isResourceVisible(static::class);
     }
 
-    public static function getNavigationGroup(): string | \UnitEnum | null
+    public static function getNavigationGroup(): string | UnitEnum | null
     {
         return DeliaPlugin::get()->getNavigationGroupLabel();
     }
