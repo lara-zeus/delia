@@ -14,7 +14,7 @@ class DeliaServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-        Livewire::addComponent(name:'delia-bookmarks',class: BookmarkComponent::class);
+        Livewire::addComponent(name: 'delia-bookmarks', class: BookmarkComponent::class);
     }
 
     public function configurePackage(Package $package): void
