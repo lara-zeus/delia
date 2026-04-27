@@ -1,6 +1,6 @@
 ---
-title: v1
+title: v3
 slogan: Bookmark manager for your filament resources
 githubUrl: https://github.com/lara-zeus/delia
-branch: 1.x
+branch: 3.x
 ---
